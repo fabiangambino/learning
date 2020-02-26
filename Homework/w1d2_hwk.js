@@ -98,86 +98,9 @@ function yell(string) {
 // of that string.
 //
 // Examples:
-// console.log(whisper("Hey Anthony")); // => "...hey anthony..."
-// console.log(whisper("YEA! that was fun")); // => "...yea! that was fun..."
+console.log(whisper("Hey Anthony")); // => "...hey anthony..."
+console.log(whisper("YEA! that was fun")); // => "...yea! that was fun..."
 //
 function whisper(string) {
   return "..." + string.toLowerCase() + "...";
-}
-
-// isSubstring
-
-// Write a function `isSubstring` that takes in two strings, `searchString` and
-// `subString`. The function should return `true` if `subString` is a part of the
-// `searchString`, `false` otherwise.
-// Write two versions of this function, using conditionals and without using conditionals
-//
-// Examples:
-// console.log(isSubstring("The cat went to the store", "he cat went")); // => true
-// console.log(isSubstring("Time to program", "time")); // => true
-// console.log(isSubstring("Jump for joy", "joys")); // => false
-//
-
-// isSubstring with CONDITIONAL
-function isSubstring(searchString, subString) {
-  if (searchString.indexOf(subString) !== -1) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-// isSubstring without conditional
-function isSubstring(searchString, subString) {
-  return searchString.indexOf(subString) > -1;
-}
-
-// echo
-
-// Write a function `echo` that takes in a string and returns that string "echo-ized".
-//
-// Examples:
-// console.log(echo("Mom!")); // => "MOM! ... Mom! ... mom!"
-// console.log(echo("hey")); // => "HEY ... hey ... hey"
-// console.log(echo("JUMp")); // => "JUMP ... JUMp ... jump"
-//
-function echo(string) {
-  var allUpper = string.toUpperCase();
-  var allLower = string.toLowerCase();
-  return allUpper + "..." + string + "..." + allLower;
-}
-
-// isEven
-
-// Write a function `isEven` that takes in a number and returns `true` if the number
-// is even, `false` otherwise. Write `isEven` by using the `isOdd` function you
-// made previously. HINT: you can call `isOdd` from within `isEven`.
-//
-// Examples:
-// console.log(isEven(2)); // => true
-// console.log(isEven(5)); // => false
-//
-function isEven(num) {
-  if (num % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-// averageOfFour
-
-// Write a function `averageOfFour(num1, num2, num3, num4)` that takes in four
-// numbers. The function should return the average of all of the numbers.
-//
-// Examples:
-//
-console.log(averageOfFour(10, 10, 15, 5)); // => 10
-console.log(averageOfFour(3, 10, 11, 4)); // => 7
-console.log(averageOfFour(1, 2, 3, 4)); // => 2.5
-
-function averageOfFour(num1, num2, num3, num4) {
-  var sum = num1 + num2 + num3 + num4
-  var avg = sum / 4
-  return avg
 }
