@@ -42,8 +42,8 @@ function range(start, end) {
 //
 // Examples:
 //
-console.log(sumArray([5, 6, 4])); // => 15
-console.log(sumArray([7, 3, 9, 11])); // => 30
+// console.log(sumArray([5, 6, 4])); // => 15
+// console.log(sumArray([7, 3, 9, 11])); // => 30
 
 function sumArray(array) {
   var running_total = 0
@@ -101,14 +101,61 @@ function wordPeriods(sentence) {
 // console.log(maxValue([-4, -10, 0.43])); // => 0.43
 
 function maxValue(array) {
-  var max = null
+  var max = null;
 
   for (var i = 0; i < array.length; i += 1) {
     var num = array[i];
 
-    if (num > max) {                                        // watch video to try this one their way
-      max += num
+    if (num > max || max === null) {
+      max = num
     }
   }
-  return max
+  return max;
+}
+
+// myIndexOf
+
+// Write a function `myIndexOf(array, target)` that takes in an array of
+// numbers and a target number as arguments. It should return the index value
+// of the target if it is present in the array or -1 if it is not present.
+//
+// CONSTRAINT: Do not use the indexOf method.
+//
+// Examples:
+//
+// console.log(myIndexOf([1,2,3,4],4)) // => 3
+// console.log(myIndexOf([5,6,7,8],2)) // => -1
+
+function myIndexOf(array, target) {
+  for (var i = 0; i < array.length; i += 1) {
+    var element = array[i]
+
+    if (element === target) {
+      return i
+    }
+  }return -1;
+}
+
+// factorArray
+
+// Write a function `factorArray(array, number)` that takes in an array of
+// numbers and a number and returns an array of all the factors.
+//
+// Examples:
+//
+console.log(factorArray([2,3,4,5,6],20)) // => [2,4,5]
+console.log(factorArray([2,3,4,5,6],35)) // => [5]
+console.log(factorArray([10,15,20,25],5)) // => []
+
+function factorArray(array, number) {
+  result_arr = []
+
+  for (var i = 0; i < array.length; i += 1) {
+    var element = array[i];
+
+    if (number % element === 0) {
+      result_arr.push(element);
+    }
+  }
+  return result_arr;
 }
