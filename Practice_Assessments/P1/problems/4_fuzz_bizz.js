@@ -9,8 +9,19 @@ fuzzBizz(30) => [ 2, 4, 6, 7, 8, 10, 12, 16, 18, 20, 21, 22, 24, 26 ]
 *******************************************************************************/
 
 function fuzzBizz(max) {
-  // your code here...
+  var numbers = [];
+
+  for (var i = 2; i < max; i += 1) {
+    var isDivByEither = (i % 2 === 0) || (i % 7 === 0);
+    var isDivByBoth = (i % 2 === 0) && (i % 7 === 0);
+
+    if (isDivByEither && !isDivByBoth) {
+      numbers.push(i);
+    }
+  }
+  return numbers;
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = fuzzBizz;
