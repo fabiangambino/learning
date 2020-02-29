@@ -143,9 +143,9 @@ function myIndexOf(array, target) {
 //
 // Examples:
 //
-console.log(factorArray([2,3,4,5,6],20)) // => [2,4,5]
-console.log(factorArray([2,3,4,5,6],35)) // => [5]
-console.log(factorArray([10,15,20,25],5)) // => []
+// console.log(factorArray([2,3,4,5,6],20)) // => [2,4,5]
+// console.log(factorArray([2,3,4,5,6],35)) // => [5]
+// console.log(factorArray([10,15,20,25],5)) // => []
 
 function factorArray(array, number) {
   result_arr = []
