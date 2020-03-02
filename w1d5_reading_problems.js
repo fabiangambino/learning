@@ -105,27 +105,13 @@ function everyOtherWord(sentence) {
 // marks are ". , ! ? ; :"
 //
 // Example 1
-var sent = "Stop it now! Please, wont you stop?";
-console.log(wordYeller(sent));
-// yelledWords === "Stop! it! now! Please, wont! you! stop?"; // => true
-//
-// Example 2
-var words = "Go to the store and grab the following: milk, bread, run, and cake";
-console.log(wordYeller(words)); // === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
-
-// function wordYeller(sentence) {
-//   var yelled = []
-//   var split_sentence = sentence.split(" ")
-//
-//   for (var i = 0; i < split_sentence.length; i += 1) {
-//     var last_letter = split_sentence[i][-1];
-//
-//     if (last_letter === "." || last_letter === "," || last_letter === "!" || last_letter === "?" || last_letter === ";" || last_letter === ":") {
-//       yelled.push(split_sentence[i]);
-//     }
-//   }
-//   return yelled;
-// }
+// var sent = "Stop it now! Please, wont you stop?";
+// console.log(wordYeller(sent));
+// // yelledWords === "Stop! it! now! Please, wont! you! stop?"; // => true
+// //
+// // Example 2
+// var words = "Go to the store and grab the following: milk, bread, run, and cake";
+// console.log(wordYeller(words)); // === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
 
 function wordYeller(sentence) {
   var yelled = [];
@@ -136,17 +122,12 @@ function wordYeller(sentence) {
 
     if (word[word.length-1] === "." || word[word.length-1] === "," || word[word.length-1] === "!" || word[word.length-1] === "?" || word[word.length-1] === ";" || word[word.length-1] === ":") {
       yelled.push(words[i]);
+    } else {
+      yelled.push(words[i] + "!");
     }
   }
-  return yelled;
+  return yelled.join(" ");
 }
-
-
-
-
-
-
-
 
 // arraySubstring
 
@@ -157,17 +138,27 @@ function wordYeller(sentence) {
 //
 // Examples:
 //
-// arraySubstring(["hello", "history", "helix", "hellos"],"hel")
-// => [true, false, true, true]
-// arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
+// console.log(arraySubstring(["hello", "history", "helix", "hellos"],"hel"))
+// // => [true, false, true, true]
+// console.log(arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre"))
 // => [true, false, false, true]
 
+// loop through the array and check to see if the str is a substring of each element
+// if it is we reassign that element to true
+// if it is not we reassign that element to false
+// then we return the array of boolean values
 
+function arraySubstring(words, str) {
 
-
-
-
-
+  for (var i = 0; i < words.length; i += 1) {
+    if (words[i].indexOf(str) === -1) {
+      words[i] = false;
+    } else {
+      words[i] = true;
+    }
+  }
+  return words;
+}
 
 // evenCaps
 
@@ -177,7 +168,26 @@ function wordYeller(sentence) {
 //
 // Examples:
 //
-// evenCaps("Tom got a small piece of pie")
+console.log(evenCaps("Tom got a small piece of pie"))
 // => "ToM GoT A SmAlL PiEcE Of pIe"
-// evenCaps("the book is in front of the table")
+console.log(evenCaps("the book is in front of the table"))
 // => "ThE BoOk iS In fRoNt oF ThE TaBlE"
+
+
+// loop through the string and reassign each letter at even indexes as it's capitalized expression
+// examples are counting spaces as chars in the sentence
+// return the modified str
+
+function evenCaps(sentence) {
+
+  var chars = []
+
+  for (var i = 0; i < sentence.length; i += 1) {
+    if (i % 2 === 0) {
+      chars.push(sentence[i].toUpperCase());
+    } else {
+      chars.push(sentence[i]);
+    }
+  }
+  return chars.join("");
+}
