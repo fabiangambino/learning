@@ -1,3 +1,4 @@
+
 // isInside
 
 // Write a function `isInside(array, ele)` that returns true if `ele` is an element
@@ -112,6 +113,11 @@ function everyOtherWord(sentence) {
 // // Example 2
 // var words = "Go to the store and grab the following: milk, bread, run, and cake";
 // console.log(wordYeller(words)); // === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
+<<<<<<< HEAD:w1d5_reading_problems.js
+=======
+
+// can also use string including all punctuation chars and use indexOf() to see if it exists
+>>>>>>> Week 2 Assessment Complete:Homework/w1d5_hwk.js
 
 function wordYeller(sentence) {
   var yelled = [];
@@ -138,9 +144,15 @@ function wordYeller(sentence) {
 //
 // Examples:
 //
+<<<<<<< HEAD:w1d5_reading_problems.js
 // console.log(arraySubstring(["hello", "history", "helix", "hellos"],"hel"))
 // // => [true, false, true, true]
 // console.log(arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre"))
+=======
+console.log(arraySubstring(["hello", "history", "helix", "hellos"],"hel"))
+// // => [true, false, true, true]
+console.log(arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre"))
+>>>>>>> Week 2 Assessment Complete:Homework/w1d5_hwk.js
 // => [true, false, false, true]
 
 // loop through the array and check to see if the str is a substring of each element
@@ -168,9 +180,15 @@ function arraySubstring(words, str) {
 //
 // Examples:
 //
+<<<<<<< HEAD:w1d5_reading_problems.js
 console.log(evenCaps("Tom got a small piece of pie"))
 // => "ToM GoT A SmAlL PiEcE Of pIe"
 console.log(evenCaps("the book is in front of the table"))
+=======
+// console.log(evenCaps("Tom got a small piece of pie"))
+// // => "ToM GoT A SmAlL PiEcE Of pIe"
+// console.log(evenCaps("the book is in front of the table"))
+>>>>>>> Week 2 Assessment Complete:Homework/w1d5_hwk.js
 // => "ThE BoOk iS In fRoNt oF ThE TaBlE"
 
 
