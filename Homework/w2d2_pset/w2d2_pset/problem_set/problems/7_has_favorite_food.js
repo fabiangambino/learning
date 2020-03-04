@@ -10,20 +10,25 @@ var dog = {
   favoriteFoods: ['chicken', 'sausage', 'scooby snacks']
 }
 
-hasFavoriteFood(dog, 'sausage'); // => true
-hasFavoriteFood(dog, 'cat food'); // => false
+console.log(hasFavoriteFood(dog, 'sausage')); // => true
+console.log(hasFavoriteFood(dog, 'cat food')); // => false
 
 var person = {
   name: 'Al',
   favoriteFoods: ['pizza', 'burgers', 'ramen']
 }
 
-hasFavoriteFood(person, 'burgers'); // => true
-hasFavoriteFood(person, 'fish'); // => false
+console.log(hasFavoriteFood(person, 'burgers')); // => true
+console.log(hasFavoriteFood(person, 'fish')); // => false
 ***********************************************************************/
 
 function hasFavoriteFood(obj, food) {
 
+  var foods = obj['favoriteFoods'];
+  if (foods.indexOf(food) === -1) {
+    return false;
+  }
+  return true;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -12,21 +12,29 @@ valuePair(object1, object2, 'location'); // => [ 'NY', 'SF' ]
 valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 ***********************************************************************/
 
+// function valuePair(obj1, obj2, key) {
+//
+//   var result = []
+//
+//   for (var pair_key in obj1) {
+//     if (pair_key === key) {
+//       result.push(obj1[pair_key]);
+//     }
+//   }
+//
+//   for (var pair_key in obj2) {
+//     if (pair_key === key) {
+//       result.push(obj2[pair_key]);
+//     }
+//   }
+//   return result;
+// }
+
 function valuePair(obj1, obj2, key) {
-  var result = []
+  var val1 = obj1[key];               // bracket notation normally passes in strings
+  var val2 = obj2[key];               // can only do this because the key holds a string value
 
-  for (var pair in obj1) {
-    if (pair === key) {
-      result.push(obj1[pair]);
-    }
-  }
-
-  for (var pair in obj2) {
-    if (pair === key) {
-      result.push(obj2[pair]);
-    }
-  }
-  return result;
+  return [val1, val2];
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
