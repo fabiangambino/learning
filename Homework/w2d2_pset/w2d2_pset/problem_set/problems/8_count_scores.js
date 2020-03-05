@@ -29,10 +29,40 @@ var peeps = [
 countScores(peeps); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
+// countScores(people) takes in an array of objects that have the keys name and score that store
+// corressponding values
+// when calling the function we want to return one object with keys of people's names
+// and values of their corresponding countScores
+// it seems like identical key names perform operatiosn on the values
+
+var ppl = [ {name: "Anthony", score: 10},
+            {name: "Fred", score: 10},
+            {name: "Anthony", score: -8},
+            {name: "Winnie", score: 12}];
+
+var countPpl = countScores(ppl);
+console.log(countPpl); //=> { Anthony: 2, Fred: 10, Winnie: 12 }
 
 function countScores(people) {
 
+  var ppl_scores = {};
+
+  for (var i = 0; i < people.length; i += 1) {
+
+    var person = people[i];
+    var person_name = person['name'];
+    var person_score = person['score'];
+
+    if (ppl_scores[person_name] === undefined) {
+      ppl_scores[person_name] = person_score;
+    }
+    else {
+      ppl_scores[person_name] += person_score;
+    }
+  }
+  return ppl_scores;
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = countScores;

@@ -11,8 +11,8 @@ doesKeyExist(obj1, 'name'); // => false
 ***********************************************************************/
 
 function doesKeyExist(obj, key) {
-  for (var objkey in obj) {
-    if (objkey === key) {
+  for (var obj_key in obj) {
+    if (obj_key === key) {
       return true;
     }
   }
