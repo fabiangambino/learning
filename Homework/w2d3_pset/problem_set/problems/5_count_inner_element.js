@@ -22,31 +22,24 @@ how many times each element in each sub array repeats.
 
 // countInnerElement(arr2) // => {a: 4, b: 2, c: 2, d: 2}
 ***********************************************************************/
-var arr1 = [
-  [1,2,4,5],
-  [2,7,4],
-  [1,4,5,2,7]
-]
-
-console.log(countInnerElement(arr1)) // => {1: 2, 2: 3, 4: 3, 5: 2, 7: 2}
 
 function countInnerElement(arr) {
 
   var num_counts = {};
 
-
   for (i = 0; i < arr.length; i += 1) {
     var inner_arr = arr[i];
-    var sum = 0
 
     for (j = 0; j < inner_arr.length; j += 1) {
         var num = inner_arr[j];
+        var count = 0
 
         if (num_counts[num] === undefined) {
-          num_counts[num] = num;
+          num_counts[num] = 1;
+        } else {
+          num_counts[num] += 1;
         }
     }
-
   }
   return num_counts;
 }
