@@ -12,23 +12,40 @@ var result = zipArray(a1, a2);
 result; // => [ [ 'a', 10 ], [ 'b', 20 ], [ 'c', 30 ], [ 'd', 40 ] ]
 ***********************************************************************/
 
-function zipArray(arr1, arr2) {
+// function zipArray(arr1, arr2) {
+//
+//   var pairs = [];
+//
+//   for (var i = 0; i < arr1.length; i += 1) {
+//     var letter = arr1[i];
+//
+//     for (var j = 0; j < arr2.length; j += 1) {
+//       var num = arr2[j];
+//
+//       if (i === j) {
+//         pairs.push([letter, num])
+//       }
+//     }
+//   }
+//   return pairs;
+// }
 
-  var pairs = [];
+// don't need to loop twice because the array lengths are the same so we can access
+// each array's sister element by accessing the same index
+
+function zipArray(arr1, arr2) {
+  var zipped = [];
 
   for (var i = 0; i < arr1.length; i += 1) {
-    var letter = arr1[i];
+    var ele1 = arr1[i];
+    var ele2 = arr2[i];
 
-    for (var j = 0; j < arr2.length; j += 1) {
-      var num = arr2[j];
-
-      if (i === j) {
-        pairs.push([letter, num])
-      }
-    }
+    zipped.push([ele1, ele2]);
   }
-  return pairs;
+  return zipped;
 }
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = zipArray;

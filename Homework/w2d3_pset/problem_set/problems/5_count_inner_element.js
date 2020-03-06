@@ -32,7 +32,6 @@ function countInnerElement(arr) {
 
     for (j = 0; j < inner_arr.length; j += 1) {
         var num = inner_arr[j];
-        var count = 0
 
         if (num_counts[num] === undefined) {
           num_counts[num] = 1;
