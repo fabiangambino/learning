@@ -7,9 +7,27 @@ Example:
 elementCount(["a", "a", "b", "b"]); //=> { "a" : 2, "b" : 2 }
 elementCount(['c', 'a', 'c', 'a', 'b']); // => { "c": 2, "a": 2, "b": 1 }
 ***********************************************************************/
+// console.log(elementCount(["a", "a", "b", "b"])); //=> { "a" : 2, "b" : 2 }
+// console.log(elementCount(['c', 'a', 'c', 'a', 'b'])); // => { "c": 2, "a": 2, "b": 1 }
+
+// first create an empty object
+// next loop through the array and select each element
+// if element does not exist as a key in the object add the element to object with a value of 1
+// if the element already exists aggregate it's value by 1
+// return the object
 
 function elementCount(array) {
+  var obj = {};
 
+  for (var i = 0; i < array.length; i += 1) {
+    var ele = array[i];
+    if (obj[ele] === undefined) {
+      obj[ele] = 1;
+    } else {
+      obj[ele] += 1;
+    }
+  }
+  return obj;
 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = elementCount;

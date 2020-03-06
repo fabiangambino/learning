@@ -11,9 +11,9 @@ capVowels('hello world'); // => 'hEllO wOrld'
 capVowels('HELLO WORLD'); // => 'hEllO wOrld'
 capVowels('boOtCamP PreP'); // => 'bOOtcAmp prEp'
 ***********************************************************************/
-console.log(capVowels('hello world')); // => 'hEllO wOrld'
-console.log(capVowels('HELLO WORLD')); // => 'hEllO wOrld'
-console.log(capVowels('boOtCamP PreP')); // => 'bOOtcAmp prEp'
+// console.log(capVowels('hello world')); // => 'hEllO wOrld'
+// console.log(capVowels('HELLO WORLD')); // => 'hEllO wOrld'
+// console.log(capVowels('boOtCamP PreP')); // => 'bOOtcAmp prEp'
 
 
 
@@ -25,14 +25,10 @@ function capVowels(string) {
     var letter = letters[i];
 
     if (vowels.indexOf(letter) !== -1) {
-      letter = letter.toUpperCase();
-    } else {
-    continue;
+      letters[i] = letter.toUpperCase();
     }
-  console.log(letters);
-  // return letters.join("");
   }
-
+  return letters.join("");
 }
 
 
