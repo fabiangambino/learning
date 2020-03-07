@@ -50,5 +50,21 @@ function minMaxProduct(array){
 
 }
 
+// function minMaxProduct(array) {
+//   var min = array[0];
+//   var max = array[0];
+//
+//   for (var i = 0; i < array.length; i += 1) {
+//     var num = array[i];
+//
+//     if (num < min) {
+//       min = num;
+//     } else if (num > max) {
+//       max = num;
+//     }
+//   }
+//   return min * max;
+// }
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = minMaxProduct;

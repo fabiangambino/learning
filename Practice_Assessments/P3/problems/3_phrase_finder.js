@@ -18,22 +18,39 @@ phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello goodbye') => false
 // console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello prep')) //=> true
 // console.log(phraseFinder(['world', 'bootcamp', 'hello', 'prep'], 'hello goodbye')) //=> false
 
-function phraseFinder(words, phrase){
-  var phrase_words = phrase.split(" ");
-  var counter = 0
+// function phraseFinder(words, phrase){
+//   var phrase_words = phrase.split(" ");
+//   var counter = 0
+//
+//   for (var i = 0; i < phrase_words.length; i += 1) {
+//     var phrase_word = phrase_words[i];
+//
+//     if (words.indexOf(phrase_word) !== -1) {
+//       counter += 1;
+//     }
+//   }
+//   if (counter !== 2) {
+//     return false;
+//   }
+//   return true;
+// }
 
-  for (var i = 0; i < phrase_words.length; i += 1) {
-    var phrase_word = phrase_words[i];
+function phraseFinder(words, phrase) {
+  for (var i = 0; i < words.length; i += 1) {
+    var word1 = words[i];
 
-    if (words.indexOf(phrase_word) !== -1) {
-      counter += 1;
+    for (var j = 0; j < words.length; j += 1) {
+      var word2 = words[j];
+      var pair = word1 + " " + word2;
+
+      if (pair === phrase) {
+        return true;
+      }
     }
   }
-  if (counter !== 2) {
-    return false;
-  }
-  return true;
+  return false;
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = phraseFinder;
