@@ -17,7 +17,7 @@ threeIncreasing([7, 2, 4, 5, 2, 1, 6]); // => false
 
 function threeIncreasing(arr) {
 
-  for(var i = 0; i < arr.length; i += 1) {
+  for(var i = 0; i < arr.length - 2; i += 1) {
     var num1 = arr[i];
     var num2 = arr[i + 1];
     var num3 = arr[i + 2];

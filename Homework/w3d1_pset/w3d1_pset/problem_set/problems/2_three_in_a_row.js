@@ -12,7 +12,7 @@ threeInARow([10, 9, 20, 33, 3, 3]); // => false;
 // console.log(threeInARow([10, 9, 20, 33, 3, 3])); // => false;
 
 
-function threeInARow(arr) {
+function threeInARow(arr) {                          
   var count = 1;
 
   for (var i = 0; i < arr.length; i += 1) {
@@ -28,6 +28,8 @@ function threeInARow(arr) {
   }
   return false;
 }
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = threeInARow;

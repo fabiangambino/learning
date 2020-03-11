@@ -15,27 +15,44 @@ console.log(reverb('debugged')); // => 'debuggeded'
 console.log(reverb('my')); // => 'my'
 
 
-function lastChars(word) {
-  var vowels = "aeiou".split("");
+// function lastChars(word) {                               // MY SOLUTION
+//   var vowels = "aeiou".split("");
+//
+//   for (var i = word.length - 1; i >= 0; i -= 1) {
+//     var char = word[i];
+//
+//     if (vowels.indexOf(char) !== -1) {
+//       var newWord = word.slice(i);
+//       return newWord;
+//     }
+//   }
+// }
+//
+// function reverb(word) {
+//
+//   if (lastChars(word) !== undefined) {
+//     return word + lastChars(word);
+//   } else {
+//     return word;
+//   }
+// }
+
+function reverb(word) {
+  var vowels = "aeiou".split("");                           // THEIR SOLUTION
 
   for (var i = word.length - 1; i >= 0; i -= 1) {
     var char = word[i];
 
     if (vowels.indexOf(char) !== -1) {
-      var newWord = word.slice(i);
+      var newWord = word + word.slice(i);
       return newWord;
     }
   }
+  return word;
 }
 
-function reverb(word) {
 
-  if (lastChars(word) !== undefined) {
-    return word + lastChars(word);
-  } else {
-    return word;
-  }
-}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = reverb;

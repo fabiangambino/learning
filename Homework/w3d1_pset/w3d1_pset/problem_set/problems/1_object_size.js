@@ -38,7 +38,7 @@ console.log(objectSize(obj2)); // => 3
 function objectSize(obj) {
   var count = 0;
 
-  for (key in obj) {
+  for (var key in obj) {
     count += 1;
   }
 
