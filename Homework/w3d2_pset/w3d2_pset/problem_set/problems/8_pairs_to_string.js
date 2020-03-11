@@ -21,24 +21,38 @@ var array2 = [
 
 pairsToString(array2); // => 'food!'
 ***********************************************************************/
+// loop through the array to access each inner element pair
+// create a var to access each letter and a different var for each number
+// we need to concat the letter to an empty string by the number of times
+// finally we return the string
 
-// we want to loop through the outer array to access each inner array pair element
-// and concat each item at index 0 by the number of times in index 1 to an empty string
-// finally we want to return that string.
+var array1 = [
+  ['a', 3],
+  ['b', 1],
+  ['c', 2]
+];
 
+var array2 = [
+  ['f', 1],
+  ['o', 2],
+  ['d', 1],
+  ['!', 1]
+];
 
 function pairsToString(arr) {
+  var specialString = ""
 
   for (var i = 0; i < arr.length; i += 1) {
     var pair = arr[i];
     var letter = pair[0];
-    var num = pair[1];
+    var number = pair[1];
 
-    var 
-
-
+    for (var j = 1; j <= number; j += 1) {
+      specialString += letter;
+    }
   }
 
+  return specialString;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
