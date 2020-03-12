@@ -35,13 +35,13 @@ function printInfo(ele, i, arr) {
   console.log(ele, "is at position", i, "in array", arr);
 }
 
-myForEach(['a', 'b', 'c'], printInfo); // prints
+// myForEach(['a', 'b', 'c'], printInfo); // prints
 // a is at position 0 in array [ 'a', 'b', 'c' ]
 // b is at position 1 in array [ 'a', 'b', 'c' ]
 // c is at position 2 in array [ 'a', 'b', 'c' ]
 
 function myForEach(array, cb) {
-  for(var i = 0; i < array.length; i++){
+  for (var i = 0; i < array.length; i++) {
     var ele = array[i];
     cb(ele, i, array);
   }
@@ -52,7 +52,7 @@ function printHalf(num) {
   console.log(num / 2);
 }
 
-myForEach([10, 50, 120], printHalf);
+// myForEach([10, 50, 120], printHalf);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = myForEach;

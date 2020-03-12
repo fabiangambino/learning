@@ -15,9 +15,21 @@ powerSequence(3, 4); // => [ 3, 9, 27, 81 ]
 powerSequence(2, 6); // => [ 2, 4, 8, 16, 32, 64 ]
 powerSequence(8, 3); // => [ 8, 64, 512 ]
 ***********************************************************************/
+// console.log(powerSequence(3, 4)); // => [ 3, 9, 27, 81 ]
+// console.log(powerSequence(2, 6)); // => [ 2, 4, 8, 16, 32, 64 ]
+// console.log(powerSequence(8, 3)); // => [ 8, 64, 512 ]
+
 
 function powerSequence(base, length) {
+  var result = [base];
+  var product = base;
 
+  for (var i = 1; i < length; i += 1) {
+    product *= base
+    result.push(product);
+  }
+  
+  return result;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -20,10 +20,9 @@ myMap([9, 25, 100, 36, 81], Math.sqrt); // => [ 3, 5, 10, 6, 9 ]
 function myMap(arr, cb) {
   var result = [];
 
-  for(var i = 0; i < arr.length; i++){
+  for (var i = 0; i < arr.length; i++) {
     var num = arr[i];
     result.push(cb(num));
-
   }
 
   return result;
@@ -33,9 +32,9 @@ function doubler(num) {
   return num * 2;
 }
 
-console.log(myMap([2, 4, 6, 1], doubler));
-
-console.log(myMap([9, 25, 100, 36, 81], Math.sqrt)); // => [ 3, 5, 10, 6, 9 ]
+// console.log(myMap([2, 4, 6, 1], doubler));
+//
+// console.log(myMap([9, 25, 100, 36, 81], Math.sqrt)); // => [ 3, 5, 10, 6, 9 ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = myMap;
