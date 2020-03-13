@@ -15,10 +15,10 @@ hasAllVowels('hello world'); // => false
 //  only if that vowel doesn't already exist in the hasVowels array
 //  if count of hasVowels array === 5 then return true .... else return false
 
-console.log(hasAllVowels('have you gone biking?')); // => true
-console.log(hasAllVowels('get out of the way, silly')); // => true
-console.log(hasAllVowels('bootcamp prep')); // => false
-console.log(hasAllVowels('hello world')); // => false
+// console.log(hasAllVowels('have you gone biking?')); // => true
+// console.log(hasAllVowels('get out of the way, silly')); // => true
+// console.log(hasAllVowels('bootcamp prep')); // => false
+// console.log(hasAllVowels('hello world')); // => false
 
 function hasAllVowels(str) {
   var hasVowels = [];

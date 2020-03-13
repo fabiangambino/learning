@@ -20,8 +20,24 @@ mindPsAndQs('PPPXQPPPQ'); // => 5
 
 
 function mindPsAndQs(str) {
+  var current_streak = 0;
+  var longest_streak = 0;
+  var specialChars = "PQ"
 
+  for (var i = 0; i < str.length; i++) {
+    var char = str[i];
+    var next = str[i + 1];
+
+    if (specialChars.indexOf(char) === -1) {
+      continue;
+    } else if (specialChars.indexOf(char) !== -1) && (specialChars.indexOf(char) !== -1) {
+
+    }
+  }
+  return current_str
 }
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = mindPsAndQs;
