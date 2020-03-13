@@ -31,7 +31,7 @@ function signFlipCount(numbers) {
       count += 1
     }
   }
-  
+
   return count;
 }
 
