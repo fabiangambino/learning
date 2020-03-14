@@ -25,16 +25,7 @@ favoriteWord('x', 'sinful caesar sipped his snifter') //=> ''
 
 
 function favoriteWord(favoriteLetter, sentence) {
-  var words =  sentence.split(" ");
-  var occurences = [];
 
-  for (var i = 0; i < words.length; i++) {
-    var word = words[i];
-    occurences.push(specialCount(word, favoriteLetter));
-
-  }
-
-  return occurences;
 }
 
 

@@ -11,7 +11,6 @@ commonPrimeFactors(6, 24); // => [ 2, 3 ]
 commonPrimeFactors(11,22); // => [ 11 ]
 commonPrimeFactors(45, 60); // => [ 3, 5 ]
 ***********************************************************************/
-console.log(commonPrimeFactors(12, 50)); // => [ 2 ]
 // console.log(commonPrimeFactors(6, 24)); // => [ 2, 3 ]
 // console.log(commonPrimeFactors(11,22)); // => [ 11 ]
 // console.log(commonPrimeFactors(45, 60)); // => [ 3, 5 ]
