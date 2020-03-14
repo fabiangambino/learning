@@ -17,25 +17,31 @@ mindPsAndQs('APCDQQPPC'); // => 4
 mindPsAndQs('PQPQ'); // => 4
 mindPsAndQs('PPPXQPPPQ'); // => 5
 ***********************************************************************/
-
+// console.log(mindPsAndQs('BOOTCAMP')); // => 1
+// console.log(mindPsAndQs('APCDQQPPC')); // => 4
+// console.log(mindPsAndQs('PQPQ')); // => 4
+// console.log(mindPsAndQs('PPPXQPPPQ')); // => 5
 
 function mindPsAndQs(str) {
   var current_streak = 0;
   var longest_streak = 0;
-  var specialChars = "PQ"
 
   for (var i = 0; i < str.length; i++) {
     var char = str[i];
-    var next = str[i + 1];
 
-    if (specialChars.indexOf(char) === -1) {
-      continue;
-    } else if (specialChars.indexOf(char) !== -1) && (specialChars.indexOf(char) !== -1) {
-
+    if (char === "P" || char === "Q") {
+      current_streak += 1;
+      longest_streak = current_streak
+    } else {
+      current_streak = 0
     }
   }
-  return current_str
+
+  return longest_streak;
 }
+
+
+
 
 
 

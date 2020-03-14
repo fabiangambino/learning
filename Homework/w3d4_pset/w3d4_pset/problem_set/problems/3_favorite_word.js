@@ -11,13 +11,6 @@ favoriteWord('a', 'sinful caesar sipped his snifter') //=> 'caesar'
 favoriteWord('s', 'sinful caesar sipped his snifter') //=> 'sinful'
 favoriteWord('x', 'sinful caesar sipped his snifter') //=> ''
 ***********************************************************************/
-// first we want to split the sentence into an array of words
-// next we want to loop the the array by word and count the number of times
-// the letter appears in the word and store count in a letterCount array
-// later we will loop through the array to return the word at the index of greatest count
-//
-//
-
 // console.log(favoriteWord('p', 'sinful caesar sipped his snifter')); // => 'sipped'
 // console.log(favoriteWord('a', 'sinful caesar sipped his snifter')); //=> 'caesar'
 // console.log(favoriteWord('s', 'sinful caesar sipped his snifter')); //=> 'sinful'
@@ -25,11 +18,23 @@ favoriteWord('x', 'sinful caesar sipped his snifter') //=> ''
 
 
 function favoriteWord(favoriteLetter, sentence) {
+  var words = sentence.split(" ");
+  var result = "";
+  var most = 0;
 
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i];
+    if (letterCount(word, favoriteLetter) > most) {
+      most = letterCount(word, favoriteLetter);
+      result = word;
+    }
+  }
+
+  return result;
 }
 
 
-function specialCount(string, char) {
+function letterCount(string, char) {
   var count = 0;
 
   for (var i = 0; i < string.length; i++) {

@@ -19,8 +19,6 @@ function commonFactors(num1, num2) {
   var num1Factors = factors(num1);
   var num2Factors = factors(num2);
   var result = [];
-  // console.log(num1Factors);
-  // console.log(num2Factors);
 
   for (var i = 0; i < num1Factors.length; i++) {
     var ele1 = num1Factors[i];
@@ -36,8 +34,6 @@ function commonFactors(num1, num2) {
 
   return result;
 }
-
-// console.log(factors(12));
 
 function factors(num) {
   var factors = [1];
