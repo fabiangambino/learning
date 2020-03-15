@@ -13,7 +13,7 @@ parsed by specified functions.
 // 1: UserName2
 // ...and so forth, for all the users
 
-// var users1 = your code here;
+var users1 = [{id: 0, username: "Username1"}, {id: 1, username: "Username2"}]
 
 function printUsers(users) {
   for (var i = 0; i < users.length; i++) {
@@ -40,7 +40,10 @@ function printUsers(users) {
 //   -siteName5
 // ...and so forth, for all the users
 
-// var users2 = your code here;
+var users2 = [
+  {username: "Fabian", sites: [{url: "www.silo.com"}, {url: "www.25KD.com"}]},
+  {username: "Rob", sites: [{url: "www.akamai.com"}, {url: "www.condord.com"}]}
+]
 
 function printUsersWebsites (users) {
   for (var i = 0; i < users.length; i++) {
@@ -87,7 +90,27 @@ function printUsersWebsites (users) {
 //     -popularity score: 32
 // ...and so forth, for all the users
 
-// var users3 = your code here;
+
+// ~~UserName1~~
+//   -siteName1.com
+//     -load: 21%
+//     -# of users: 210000
+//     -popularity score: 32
+//   -siteName2.com
+//     -load: 21%
+//     -# of users: 210000
+//     -popularity score: 32
+
+var users3 = [
+  {username: "Fabian", sites: [
+    {url: "www.silo.com", load: "21", userCount: "21,000", pop: "32"},
+    {url: "www.25KD.com", load: "19", userCount: "19,000", pop: "31"}
+  ]},
+  {username: "Rob", sites: [
+    {url: "www.akamai.com", load: "40", userCount: "25,000", pop: "45"},
+    {url: "www.concord.com", load: "32", userCount: "32,000", pop: "60"}
+  ]}
+]
 
 function printUsersWebsitesInfo (users) {
   for (var i = 0; i < users.length; i++) {

@@ -14,7 +14,10 @@ var students1 = [
 // Pawandeep
 
 function printNames(students) {
-    //your code here...
+    for (var i = 0; i < students.length; i++) {
+      var studentObj = students[i];
+      console.log(studentObj.name);
+    }
 }
 
 // printNames(students1); // uncomment when ready to test
@@ -44,7 +47,10 @@ var students2 = [
 // Pawandeep is student #2
 
 function printStudents(students) {
-  //your code here...
+  for (var i = 0; i < students.length; i++) {
+    var studentObj = students[i];
+    console.log(studentObj.name + " is " + "student #" + studentObj.id);
+  }
 }
 
 // printStudents(students2); // uncomment when ready to test
@@ -77,11 +83,28 @@ var students3 = [
 // Pawandeep 92
 
 function printBestGrade(students) {
-  //your code here...
+  for (var i = 0; i < students.length; i++) {
+    var studentObj = students[i];
+    var studentGrades = studentObj.grades;
+
+    console.log(studentObj.name + " " + highestScore(studentGrades));
+  }
+}
+
+function highestScore(array) {        // helper function returns highest score for student
+  var highestScore = 0;
+
+  for (var i = 0; i < array.length; i++) {
+    var scoreObj = array[i];
+    if (scoreObj.score > highestScore) {
+      highestScore = scoreObj.score;
+    }
+  }
+
+  return highestScore;
 }
 
 // printBestGrade(students3); // uncomment when ready to test
-
 
 // Write a function that will print the name of the student and their average test score
 //
@@ -93,7 +116,23 @@ function printBestGrade(students) {
 // Pawandeep 73.33333333333333
 
 function printAverageGrade(students) {
-  //your code here...
+  for (var i = 0; i < students.length; i++) {
+    var studentObj = students[i];
+    var studentGrades = studentObj.grades;
+
+    console.log(studentObj.name + " " + averageScore(studentGrades));
+  }
+}
+
+function averageScore(array) {         // helper function returns avg score for student
+  var sum = 0;
+
+  for (var i = 0; i < array.length; i++) {
+    var scoreObj = array[i];
+    sum += scoreObj.score;
+  }
+
+  return sum / array.length;
 }
 
 // printAverageGrade(students3); // uncomment when ready to test
